@@ -24,7 +24,8 @@ operator:
   #   digest: 28c80b379c75242c6fe793dfbf212f43c602140a0de5ebe3d9c2a3a7b9f9f983
   #   pullPolicy: IfNotPresent
   image:
-    repository: quay.io/minio/operator:v5.0.7
+    repository: quay.io/minio/operator
+    tag: v5.0.7
     pullPolicy: IfNotPresent
   imagePullSecrets: [ ]
   runtimeClassName: ~
@@ -64,7 +65,8 @@ operator:
 
 console:
   image:
-    repository: quay.io/minio/operator:v5.0.7
+    repository: quay.io/minio/operator
+    tag: v5.0.7
     pullPolicy: IfNotPresent
   env: [ ]
   imagePullSecrets: [ ]
@@ -93,10 +95,3 @@ console:
     pathType: Prefix
   volumes: [ ]
   volumeMounts: [ ]
-
-
-tls:
-  ca_crt: ""
-
-app_acr:
-  dockerconfig: ""
