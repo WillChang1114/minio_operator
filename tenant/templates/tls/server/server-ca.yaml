@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{ .Values.tenant.name }}-root-ca
+type: Opaque
+data: 
+  public.crt: {{ .Values.tls.ca | b64enc | quote }}

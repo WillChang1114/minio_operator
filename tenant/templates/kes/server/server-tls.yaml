@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{ .Values.tenant.name }}-kes-server-tls
+type: Opaque
+data: 
+  public.crt: {{ .Values.kes.server.ca | b64enc | quote }}
